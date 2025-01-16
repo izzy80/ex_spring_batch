@@ -36,4 +36,17 @@ public class MainController {
         return "ok";
     }
 
+    //테이블에 데이터를 읽어 “win” 컬럼 값이 10이 넘으면 “reward” 컬럼에 true 값을 준다.
+    @GetMapping("/second")
+    public String secondApi(@RequestParam("value") String value) throws Exception {
+
+        JobParameters jobParameters = new JobParametersBuilder()
+                .addString("date", value)
+                .toJobParameters();
+
+        jobLauncher.run(jobRegistry.getJob("secondJob"), jobParameters);
+
+        return "ok";
+    }
+
 }

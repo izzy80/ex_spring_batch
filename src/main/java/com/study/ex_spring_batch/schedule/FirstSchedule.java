@@ -22,7 +22,7 @@ public class FirstSchedule {
     }
 
     //10초마다 실행
-    @Scheduled(cron = "10 * * * * *", zone = "Asia/Seoul")
+//    @Scheduled(cron = "10 * * * * *", zone = "Asia/Seoul")
     public void runFirstJob() throws Exception {
 
         System.out.println("first schedule start");
