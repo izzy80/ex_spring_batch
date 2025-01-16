@@ -87,6 +87,7 @@ public class FirstBatch {
             @Override
             public AfterEntity process(BeforeEntity item) throws Exception {
 
+                //지금 데이터는 중복으로 저장되고 있음
                 AfterEntity afterEntity = new AfterEntity();
                 afterEntity.setUsername(item.getUsername());
 
